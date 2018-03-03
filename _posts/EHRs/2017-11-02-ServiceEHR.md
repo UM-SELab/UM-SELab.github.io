@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Service-oriented EHR Sharing System"
-date:   2017-11-03 
-categories: EHRs 
+date:   2017-11-03
+categories: EHRs
 author: Nafees Qamar, Yilong Yang, Andras Nadas, Zhiming Liu and Janos Sztipanovits
 ---
 
@@ -10,9 +10,9 @@ Privacy-Preserving EHR Sharing System takes on the problem of automatically iden
 
 {% include img.html url="new_diagram.png" %}
 
-Patients’ Electronic Health Records (EHRs) are stored, processed, and transmitted across several healthcare platforms and among clinical researchers for on-line diagnostic services and other clinical research. This data dissemina- tion serves as a basis for prevention and diagnosis of a disease and other secondary purposes such as health system planning, public health surveillance, and generation of anonymized data for testing. However, exchanging data across organizations is a non-trivial task because of the embodied potential for privacy intrusion. Medical organizations tend to have confidential agreements with patients, which strictly forbid them to disclose any identifiable information of the patients. Health Insurance Portability and Accountability Act (HIPAA) explicitly states the confidentiality protection on health information that any sharable EHRs system must legally comply with. To abide by these strict regulations,data custodians generally use de-identification1 techniques so that any identifiable information on patient’s EHR can be suppressed or generalized. 
+Patients’ Electronic Health Records (EHRs) are stored, processed, and transmitted across several healthcare platforms and among clinical researchers for on-line diagnostic services and other clinical research. This data dissemina- tion serves as a basis for prevention and diagnosis of a disease and other secondary purposes such as health system planning, public health surveillance, and generation of anonymized data for testing. However, exchanging data across organizations is a non-trivial task because of the embodied potential for privacy intrusion. Medical organizations tend to have confidential agreements with patients, which strictly forbid them to disclose any identifiable information of the patients. Health Insurance Portability and Accountability Act (HIPAA) explicitly states the confidentiality protection on health information that any sharable EHRs system must legally comply with. To abide by these strict regulations,data custodians generally use de-identification1 techniques so that any identifiable information on patient’s EHR can be suppressed or generalized.
 
-However, in reality, research indicates that 87% of the population of U.S. can be distinguished by sex, date of birth and zip code. We can define quasi-identifiers as the background information about one or more people in the dataset. If an adversary has knowledge of these quasi-identifiers, it can possibly recognize an individual and take advantage of his clinical data. On the other hand, we can find out most of these quasi-identifiers have statistical meanings in clinical research. There exists a paradox between reducing the likelihood of disclosure risk and retaining the data quality. For instance, if information related to patients’ residence was excluded from the EHR, it would disable related clinical partners to catch the spread of a disease. Thus, strictly filtered data may lead to failure in operations. Conversely, releasing data including patients’ entire information including residence, sex and date of birth would bring a higher disclosure risk. 
+However, in reality, research indicates that 87% of the population of U.S. can be distinguished by sex, date of birth and zip code. We can define quasi-identifiers as the background information about one or more people in the dataset. If an adversary has knowledge of these quasi-identifiers, it can possibly recognize an individual and take advantage of his clinical data. On the other hand, we can find out most of these quasi-identifiers have statistical meanings in clinical research. There exists a paradox between reducing the likelihood of disclosure risk and retaining the data quality. For instance, if information related to patients’ residence was excluded from the EHR, it would disable related clinical partners to catch the spread of a disease. Thus, strictly filtered data may lead to failure in operations. Conversely, releasing data including patients’ entire information including residence, sex and date of birth would bring a higher disclosure risk.
 
 we address the emerging problem of de-identification techniques, namely, the problem of offering de-identified dataset for a secondary purpose that makes it possible for a prospective user to perform retrospective processing of medical data endangering patient privacy. Figure  overviews the proposed technique, and the standard data request process. Our approach differs from the traditional techniques in the sense that it employs software engineering principles to isolate and develop key requirements of data custodians and requesters. We apply Service-Oriented Architecture (SOA) that provides an effective solution for connecting business functions across the web-both between and within enterprises.
 
@@ -21,7 +21,7 @@ we address the emerging problem of de-identification techniques, namely, the pro
 {% include img.html url="datastructure.png" %}
 
 Figure 2 describes the data structure of the GastrOS database. GastrOS database contains the following tables: the clinicaldetection (doctor detection records), patient (patient information), and examination (examination records) tables are stored in the database.
-    
+
 The patient table has two relations: one patient may have more than one clinical detection record or examination record by doctor(s), so the patient id is added as a foreign key in tables ClinicalDection and Examination. GastrOS is a toy database example with insu cient amount of data available. The original database contains less than 20 rows in each table that makes is not useful for our SQL queries. Therefore, we automatically generated virtual data of 10,000 entries (note that any real data on patients also cannot be published.)
 
 {% include img.html url="rbac.png" %}
@@ -45,7 +45,7 @@ These queries show that all specific details on patients are avoided when execut
 
 ### Publication
 
-[Nafees Qamar, Yilong Yang, Andras Nadas, Zhiming Liu and Janos Sztipanovits. Anonymously Analyzing Clinical Datasets. ITCH 2016](/assets/publication/icth2016.pdf)
+[Nafees Qamar, Yilong Yang, Andras Nadas, Zhiming Liu and Janos Sztipanovits. Anonymously Analyzing Clinical Datasets. ITCH 2016](/data/publication/icth2016.pdf)
 
 ### Tutorial Demo
 {% include video.html url="ServiceEHR.mp4" %}
