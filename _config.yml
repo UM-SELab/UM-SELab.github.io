@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Software Engineering Lab
 shorttitle: SE Lab
-date: 2013-2017
+date: 2013-2018
 email: yylonly@gmail.com
 description: Software Engineering Lab focus on the issues of software engineering.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -26,7 +26,7 @@ permalink: /:categories/:title.html
 
 # Build settings
 markdown: kramdown
-theme: mcloud
+remote_theme: yylonly/jekyll-theme-mcloud
 plugins:
   - jekyll-feed
 
