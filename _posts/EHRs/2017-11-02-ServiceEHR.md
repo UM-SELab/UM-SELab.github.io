@@ -1,14 +1,16 @@
 ---
 layout: post
-title:  "Service-oriented EHR Sharing System"
+title:  "MicroShare: Privacy-Preserved Medical Resource Sharing through MicroService Architecture"
 date:   2017-11-03
 categories: EHRs
-author: Nafees Qamar, Yilong Yang, Andras Nadas, Zhiming Liu and Janos Sztipanovits
+author: Yilong Yang, Zu Quan, Liu Peng, Ouyang Defang and Li Xiaoshan
 ---
 
 Privacy-Preserving EHR Sharing System takes on the problem of automatically identifying clinically-relevant patterns in medical datasets without compromising patient privacy. To achieve this goal, we treat datasets as a black box for both internal and external users of data that lets us handle clinical data queries directly and far more e ciently. The novelty of the approach lies in avoiding the data de-identification process often used as a means of preserving patient privacy. The implemented toolkit combines software engineering technologies such as Java EE and RESTful web services, to allow exchanging medical data in an unidentifiable XML format as well as restricting users to the need-to-know principle. Our technique also inhibits retrospective processing of data, such as attacks by an adversary on a medical dataset using advanced computational methods to reveal Protected Health Information (PHI). The approach is validated on an endoscopic reporting application based on openEHR and MST standards. From the usability perspective, the approach can be used to query datasets by clinical researchers, governmental or non-governmental organizations in monitoring health care services to improve quality of care.
 
-{% include img.html url="new_diagram.png" %}
+<!-- ![](../data/imgs/microserviceEHR.jpg) -->
+
+{% include img.html url="microserviceEHR.jpg" %}
 
 Patients’ Electronic Health Records (EHRs) are stored, processed, and transmitted across several healthcare platforms and among clinical researchers for on-line diagnostic services and other clinical research. This data dissemina- tion serves as a basis for prevention and diagnosis of a disease and other secondary purposes such as health system planning, public health surveillance, and generation of anonymized data for testing. However, exchanging data across organizations is a non-trivial task because of the embodied potential for privacy intrusion. Medical organizations tend to have confidential agreements with patients, which strictly forbid them to disclose any identifiable information of the patients. Health Insurance Portability and Accountability Act (HIPAA) explicitly states the confidentiality protection on health information that any sharable EHRs system must legally comply with. To abide by these strict regulations,data custodians generally use de-identification1 techniques so that any identifiable information on patient’s EHR can be suppressed or generalized.
 
@@ -45,7 +47,7 @@ These queries show that all specific details on patients are avoided when execut
 
 ### Publication
 
-[Nafees Qamar, Yilong Yang, Andras Nadas, Zhiming Liu and Janos Sztipanovits. Anonymously Analyzing Clinical Datasets. ITCH 2016](/data/publication/icth2016.pdf)
+[Yang Y, Zu Q, Liu P, Ouyang D, Li X. MicroShare: Privacy-Preserved Medical Resource Sharing through MicroService Architecture. Int J Biol Sci 2018; 14(8):907-919.](/data/publication/microshare.pdf)
 
 ### Tutorial Demo
 {% include video.html url="ServiceEHR.mp4" %}
